@@ -1,6 +1,6 @@
 /* ══ Abertura (intro.ts) ═════════════════════════════════════════════════════
    A mesma nos três lugares: o app do PC usa este arquivo; o app Android (assets/intro/) e o site
-   (site/css/) recebem uma cópia por scripts/sync-android-intro.mjs. Mudou aqui, rode o script. */
+   (releases/site/css/) recebem uma cópia por scripts/sync-android-intro.mjs. Mudou aqui, rode o script. */
 .intro { position: fixed; inset: 0; z-index: 1000; }
 .intro[hidden] { display: none; }
 .intro.boot { background: #ff746c; }
