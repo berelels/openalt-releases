@@ -33,9 +33,9 @@ From the [latest release](https://github.com/berelels/openalt-releases/releases/
 
 | | File |
 |---|---|
-| PC, any Linux (GNOME on X11) | [`openalt-0.1.2-x86_64.AppImage`](https://github.com/berelels/openalt-releases/releases/download/v0.1.2/openalt-0.1.2-x86_64.AppImage) |
-| PC, Ubuntu / Debian / Zorin / Pop!_OS | [`openalt-0.1.2-amd64.deb`](https://github.com/berelels/openalt-releases/releases/download/v0.1.2/openalt-0.1.2-amd64.deb) |
-| Android 5+ (phone or tablet) | [`openalt-0.1.2.apk`](https://github.com/berelels/openalt-releases/releases/download/v0.1.2/openalt-0.1.2.apk) |
+| PC, any Linux (GNOME on X11) | [`openalt-0.2.0-x86_64.AppImage`](https://github.com/berelels/openalt-releases/releases/download/v0.2.0/openalt-0.2.0-x86_64.AppImage) |
+| PC, Ubuntu / Debian / Zorin / Pop!_OS | [`openalt-0.2.0-amd64.deb`](https://github.com/berelels/openalt-releases/releases/download/v0.2.0/openalt-0.2.0-amd64.deb) |
+| Android 5+ (phone or tablet) | [`openalt-0.2.0.apk`](https://github.com/berelels/openalt-releases/releases/download/v0.2.0/openalt-0.2.0.apk) |
 
 Checksums are in `SHA256SUMS.txt` on each release page.
 
