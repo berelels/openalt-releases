@@ -4,7 +4,7 @@
 
 <p align="center"><b>Empowering anyone to stream anywhere.</b></p>
 
-<p align="center">Turn your Android phone or tablet into a second monitor, a mirror of your PC, or a game screen. At home or away. Scan one QR code and you're in.</p>
+<p align="center">Turn your Android phone or tablet into a second monitor, a mirror of your PC, a game screen, or a desk panel for your PC (the new <b>Dock</b>). At home or away. Scan one QR code and you're in.</p>
 
 <p align="center"><a href="https://cattastudios.com.br/openalt-releases/"><b>Website</b></a> · <a href="https://github.com/berelels/openalt-releases/releases/latest"><b>Latest release</b></a> · <a href="#source-code"><b>Source code</b></a></p>
 
@@ -15,7 +15,7 @@ This is where OpenAlt is **published**: the downloads, the website and the sourc
 > [!WARNING]
 > **Early preview.** OpenAlt has been tested on very few machines so far. Read [Known issues](#known-issues) before you try it, and expect rough edges.
 
-<p align="center"><img src="art/screens.png" width="900" alt="The PC app in light and dark themes, the away-from-home card, and the Android start screen"></p>
+<p align="center"><img src="art/screens.png" width="900" alt="The PC app in the Catalogue style: ready to turn on (light), the same in dark, pairing by QR with rounded corners, and This PC with the away-from-home card"></p>
 
 ## What it does
 
@@ -23,9 +23,22 @@ This is where OpenAlt is **published**: the downloads, the website and the sourc
 - **Mirror:** shows any one of your monitors on the device.
 - **Pair by QR code:** a one-time code that expires quickly. No IP addresses, no PINs.
 - **Away from home:** mirrors your PC over 4G or any Wi-Fi through your own [Tailscale](https://tailscale.com) account.
+- **Dock:** a desk panel with your music, volume, shortcuts and PC stats, without streaming. [More below](#the-dock-new-in-020).
 - **Games:** a console-style Android app with controller support, built on [Moonlight](https://github.com/moonlight-stream/moonlight-android). The PC side uses [Sunshine](https://github.com/LizardByte/Sunshine).
 
 Languages: English, Portuguese and Spanish in both apps.
+
+## The Dock (new in 0.2.0)
+
+<p align="center"><img src="site/img/dock/musica.webp" width="760" alt="The Dock's Music page on a tablet lying down: the cover of Hollywood's Bleeding, Circles by Post Malone, the time bar and big controls"></p>
+
+Pick **Dock** in the PC app and tap your PC on the phone: the device becomes a panel on your desk, beside the monitor. **No video stream**, so no load on your graphics card. The PC only sends data, over your home network, to the devices you paired.
+
+- **Music:** cover, synced lyrics (from [lrclib.net](https://lrclib.net)) and big controls for Spotify, YouTube in the browser or VLC. With no lyrics, the cover takes the screen.
+- **Controls:** volume up to 150%, output and input, the apps that are playing, shortcuts, and a drawer with your PC's apps and favourites.
+- **This PC:** processor and graphics card load and temperature, memory, network, and the weather where you are.
+- **Clock:** when nothing plays, the time, big; the player comes back when the music starts.
+- **Edit pages:** hide and reorder pages; square or rounded corners.
 
 ## Download
 
@@ -73,6 +86,7 @@ From version 0.1.2 on, both apps tell you when a newer version is published here
 - **Video in Chromium-based browsers** (Chrome, Brave) can freeze on the virtual screen.
 - **No wallpaper on the new screen right after connecting.** Restart GNOME with Alt+F2, `r`, Enter (your programs stay open). The app shows this tip on the device card.
 - **AMD graphics cards stream in H.264 only.** HEVC through VAAPI leaves green bars when mirroring ([Sunshine#4314](https://github.com/LizardByte/Sunshine/issues/4314)).
+- **The Dock works only at home**, on your local network, and only while the PC app is open with Dock turned on. Volume above 100% uses GNOME's over-amplification; elsewhere it stops at 100%.
 - **Away from home is mirror only**, by design.
 - **Without the system helper installed**, disconnecting leaves the device's video output reserved until you press *Turn off*, and *Turn off* asks for your password.
 - **Button mapping** may not apply on controllers that Moonlight already remaps internally.
@@ -85,6 +99,7 @@ From version 0.1.2 on, both apps tell you when a newer version is published here
 | Galaxy S20 FE (phone) and Galaxy Tab S6 Lite (tablet) | tested |
 | Away from home over 4G with Tailscale | tested |
 | Xbox and PlayStation controllers through the phone | tested |
+| Dock on the home Wi-Fi with a Galaxy Tab S6 Lite (Spotify and YouTube in Brave, PipeWire, Ryzen + RX 6600) | tested |
 | Other GNOME X11 distros | expected to work, untested |
 | Intel graphics | untested |
 | NVIDIA proprietary driver | **likely not working yet** |
@@ -101,7 +116,7 @@ OpenAlt is licensed under the GNU GPL v3.0 or later. Every release here has the 
 
 ## Credits and license
 
-Made by [Gabriel Dias](https://github.com/berelels) at **[Catta Studios](https://cattastudios.com.br/)**.
+Made by [Gabriel Dias](https://github.com/berelels) at **[Catta Studios](https://cattastudios.com.br/)**. The website is at [cattastudios.com.br/openalt-releases](https://cattastudios.com.br/openalt-releases/) in English, [Portuguese](https://cattastudios.com.br/openalt-releases/pt/) and [Spanish](https://cattastudios.com.br/openalt-releases/es/).
 
 OpenAlt is built on [Sunshine](https://github.com/LizardByte/Sunshine), [Moonlight Android](https://github.com/moonlight-stream/moonlight-android), [moonlight-common-c](https://github.com/moonlight-stream/moonlight-common-c) and [Tailscale](https://tailscale.com). The full list of third-party software and licenses is in [THIRD-PARTY.md](THIRD-PARTY.md).
 
