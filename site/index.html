@@ -1,22 +1,144 @@
 <!doctype html>
-<html lang="en">
-<head>
+<html lang="en"><head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>OpenAlt — Empowering anyone to stream anywhere</title>
-  <meta name="description" content="Free and open source: turn your phone or tablet into a second monitor, a mirror of your PC or a game screen. One QR code.">
-  <meta name="theme-color" content="#EFE6D6">
-  <meta property="og:title" content="OpenAlt — Empowering anyone to stream anywhere">
-  <meta property="og:description" content="Your phone or tablet as a second monitor, a mirror or a game screen. Free and open source.">
+  <!-- Fonte: esta página (inglês). pt/ e es/ são geradas dela por scripts/idiomas.mjs; não edite as cópias. -->
+  <title data-i18n="meta.title">OpenAlt — Your phone as a second monitor, mirror or desk panel for your PC</title>
+  <meta name="description" data-i18n-content="meta.desc" content="Free and open source app that turns an Android phone or tablet into a second monitor, a mirror of your Linux PC, a game screen or a desk panel with music, lyrics and controls. Pair with one QR code.">
+  <meta name="theme-color" content="#ECE9E2">
+  <link rel="canonical" href="https://cattastudios.com.br/openalt-releases/">
+  <link rel="alternate" hreflang="en" href="https://cattastudios.com.br/openalt-releases/">
+  <link rel="alternate" hreflang="pt-BR" href="https://cattastudios.com.br/openalt-releases/pt/">
+  <link rel="alternate" hreflang="es" href="https://cattastudios.com.br/openalt-releases/es/">
+  <link rel="alternate" hreflang="x-default" href="https://cattastudios.com.br/openalt-releases/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="OpenAlt">
+  <meta property="og:url" content="https://cattastudios.com.br/openalt-releases/">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:title" data-i18n-content="og.title" content="OpenAlt — Empowering anyone to stream anywhere">
+  <meta property="og:description" data-i18n-content="og.desc" content="Your Android phone or tablet as a second monitor, a mirror, a game screen or a desk panel for your PC. Free and open source.">
+  <meta property="og:image" content="https://cattastudios.com.br/openalt-releases/img/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
   <link rel="icon" href="img/icon.svg" type="image/svg+xml">
-  <link rel="preload" href="fonts/newsreader-latin-opsz-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/hanken-grotesk-wght.ttf" as="font" type="font/ttf" crossorigin="">
   <link rel="stylesheet" href="css/site.css">
   <link rel="stylesheet" href="css/intro.css">
-  <script src="vendor/gsap.min.js" defer></script>
-  <script src="vendor/ScrollTrigger.min.js" defer></script>
-  <script src="js/i18n.js" defer></script>
-  <script src="js/intro.js" defer></script>
-  <script src="js/main.js" defer></script>
+  <script type="application/ld+json" id="ld-app">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "OpenAlt",
+  "url": "https://cattastudios.com.br/openalt-releases/",
+  "description": "Free and open source app that turns an Android phone or tablet into a second monitor, a mirror of your Linux PC, a game screen or a desk panel with music, lyrics and controls. Pair with one QR code.",
+  "inLanguage": "en",
+  "applicationCategory": "UtilitiesApplication",
+  "operatingSystem": "Linux (GNOME on X11), Android 5+",
+  "softwareVersion": "0.2.0",
+  "license": "https://www.gnu.org/licenses/gpl-3.0.html",
+  "isAccessibleForFree": true,
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  },
+  "downloadUrl": "https://github.com/berelels/openalt-releases/releases/tag/v0.2.0",
+  "screenshot": "https://cattastudios.com.br/openalt-releases/img/dock/musica.webp",
+  "image": "https://cattastudios.com.br/openalt-releases/img/og.png",
+  "featureList": [
+    "New screen: One more monitor, on any side of any monitor.",
+    "Mirror: Any monitor of your PC, exactly as it is, in your hands.",
+    "Game: Your PC games on the sofa, with or without a controller.",
+    "Away from home: Over 4G, 5G or any Wi-Fi, through Tailscale.",
+    "Dock: A desk panel for your PC, without streaming. Music, controls, stats."
+  ],
+  "author": {
+    "@type": "Organization",
+    "name": "Catta Studios",
+    "url": "https://berelels.github.io"
+  },
+  "codeRepository": "https://github.com/berelels/openalt-releases"
+}
+</script>
+  <script type="application/ld+json" id="ld-faq">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "inLanguage": "en",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is OpenAlt?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "OpenAlt is a free, open source app that turns an Android phone or tablet into a second monitor, a mirror of a Linux PC, a game screen or a desk panel called the Dock. You install it on the PC and on the device, then pair them by scanning one QR code."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is OpenAlt free?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. OpenAlt is licensed under GPL-3.0, with no ads, no account and no subscription. The downloads and the source code of every version are on GitHub."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which computers does it work on?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Linux PCs with GNOME on X11 today: an AppImage for any distribution and a .deb for Ubuntu, Debian, Zorin and Pop!_OS. Windows is next; Wayland comes after that."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which phones and tablets work?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Any phone or tablet with Android 5 or newer, standing or lying down, placed on any side of any monitor."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the Dock mode?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The Dock, new in version 0.2.0, turns a phone or tablet into a desk panel beside your monitor: music with cover and synced lyrics, volume up to 150% and audio devices, shortcuts and your PC’s apps, processor and graphics card temperature, the weather, and a big clock when nothing plays."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does the Dock stream video?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. The PC only sends data (the song, the volume, the temperatures) over your home network, so it doesn’t load the graphics card. It works only on the local network and only with devices you paired."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I use it away from home?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, to mirror your PC over 4G, 5G or any Wi-Fi, through your own Tailscale account, with no router port to open. The Dock works only at home."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is it safe?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Pairing uses a single-use QR code that expires in two minutes, with no PIN. The PC only accepts devices you paired, and forgetting a device cuts it off from the stream and the Dock at once. Nothing about you is sent anywhere."
+      }
+    }
+  ]
+}
+</script>
+  <script src="vendor/gsap.min.js" defer=""></script>
+  <script src="vendor/ScrollTrigger.min.js" defer=""></script>
+  <script src="js/i18n.js" defer=""></script>
+  <script src="js/intro.js" defer=""></script>
+  <script src="js/main.js" defer=""></script>
   <!-- sem JavaScript, sem abertura: a página aparece direto -->
   <noscript><style>.intro { display: none; } body.intro-on { overflow: auto; }</style></noscript>
 </head>
@@ -25,180 +147,179 @@
 <div class="intro boot" id="intro" aria-hidden="true"></div>
 <a class="skip" href="#main" data-i18n="skip">Skip to content</a>
 
-<!-- ícones (usados com <use href="#i-…">) -->
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
   <defs>
-    <symbol id="i-down" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v12M6 11l6 6 6-6M5 20h14"/></symbol>
-    <symbol id="i-arrow" viewBox="0 0 40 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M2 8h34M30 2l6 6-6 6"/></symbol>
-    <symbol id="i-ne" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></symbol>
-    <symbol id="i-home" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"><path d="M4 11 12 4l8 7v9H4z"/></symbol>
-    <symbol id="i-bus" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"><rect x="5" y="3" width="14" height="15" rx="3"/><path d="M5 11h14M8 21v-3M16 21v-3"/></symbol>
-    <symbol id="i-cafe" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"><path d="M4 9h12v6a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5zM16 11h2a3 3 0 0 1 0 6h-2"/></symbol>
-    <symbol id="i-power" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M12 3v9M7 6a8 8 0 1 0 10 0"/></symbol>
-    <symbol id="i-gh" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.9 1.53 2.35 1.09 2.92.83.09-.65.35-1.09.64-1.34-2.22-.25-4.56-1.11-4.56-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02a9.5 9.5 0 0 1 5 0c1.91-1.29 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.69-4.57 4.93.36.31.68.92.68 1.86v2.76c0 .27.18.58.69.48A10 10 0 0 0 12 2z"/></symbol>
+    <symbol id="i-logo" viewBox="64 120 380 300" fill="none" stroke="currentColor" stroke-width="40" stroke-linecap="round" stroke-linejoin="round"><path d="M86 156c62-2 108-6 136 16 30 24 26 80 40 124 18 56 78 92 126 64 40-24 30-90-14-96-50-8-72 52-40 92 22 28 62 34 92 24"></path><path d="M270 152c50-8 96-10 144-6"></path></symbol>
+    <symbol id="i-down" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v12M6 11l6 6 6-6M5 20h14"></path></symbol>
+    <symbol id="i-gh" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.9 1.53 2.35 1.09 2.92.83.09-.65.35-1.09.64-1.34-2.22-.25-4.56-1.11-4.56-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02a9.5 9.5 0 0 1 5 0c1.91-1.29 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.69-4.57 4.93.36.31.68.92.68 1.86v2.76c0 .27.18.58.69.48A10 10 0 0 0 12 2z"></path></symbol>
+    <symbol id="i-plus" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M12 5v14M5 12h14"></path></symbol>
   </defs>
 </svg>
 
 <header class="nav" id="nav">
-  <a class="logo" href="#top" aria-label="OpenAlt">
-    <svg viewBox="64 120 380 300" fill="none" stroke="currentColor" stroke-width="40" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M86 156c62-2 108-6 136 16 30 24 26 80 40 124 18 56 78 92 126 64 40-24 30-90-14-96-50-8-72 52-40 92 22 28 62 34 92 24"/><path d="M270 152c50-8 96-10 144-6"/></svg>
-    <span>Open<em>Alt</em></span>
-  </a>
-  <ul class="nav-links mono">
-    <li><a href="#modes" data-i18n="nav.modes">01 Modes</a></li>
-    <li><a href="#how" data-i18n="nav.how">02 How it works</a></li>
-    <li><a href="#sides" data-i18n="nav.sides">03 Any side</a></li>
-    <li><a href="#open" data-i18n="nav.open">04 Open source</a></li>
-  </ul>
-  <div class="nav-end">
+  <div class="wrap bar">
+    <a class="brand" href="#top" aria-label="OpenAlt"><svg aria-hidden="true"><use href="#i-logo"></use></svg><b>OPENALT</b><span class="code">OA-00</span></a>
+    <nav class="links" aria-label="Sections" data-i18n-aria="nav.label">
+      <a href="#modes" data-i18n="nav.modes">Modes</a><a href="#dock" data-i18n="nav.dock">Dock</a><a href="#how" data-i18n="nav.how">How it works</a><a href="#faq" data-i18n="nav.faq">Questions</a>
+    </nav>
     <div class="lang" role="group" aria-label="Language" data-i18n-aria="lang.label">
-      <button type="button" data-lang="pt" aria-pressed="false">PT</button><button type="button" data-lang="en" aria-pressed="true">EN</button><button type="button" data-lang="es" aria-pressed="false">ES</button>
+      <a data-lang-link="en" href="./" hreflang="en" aria-current="true">EN</a><a data-lang-link="pt" href="pt/" hreflang="pt-BR">PT</a><a data-lang-link="es" href="es/" hreflang="es">ES</a>
     </div>
-    <a class="btn ink" href="#download"><span data-i18n="nav.download">Download</span><svg aria-hidden="true"><use href="#i-down"/></svg></a>
+    <a class="btn fill small" href="#download"><svg aria-hidden="true"><use href="#i-down"></use></svg><span data-i18n="nav.download">Download</span></a>
   </div>
 </header>
 
 <main id="main">
-<!-- ── herói ───────────────────────────────────────────── -->
-<section class="hero wrap" id="top">
-  <div>
-    <h1 class="h1" data-i18n="hero.title" data-split>Empowering anyone to stream <em>anywhere.</em></h1>
-    <p class="lede" data-i18n="hero.lede">Your phone or tablet becomes a second monitor, a mirror of your PC or a game screen. One QR code. That’s the setup.</p>
-    <div class="ctas">
-      <a class="btn red" href="#download"><svg aria-hidden="true"><use href="#i-down"/></svg><span data-i18n="hero.cta">Get it for Linux</span></a>
-      <a class="btn" href="#modes" data-i18n="hero.cta2">See the plan</a>
+<!-- ── herói: a ficha do catálogo ───────────────────────── -->
+<section class="hero" id="top">
+  <div class="wrap hero-grid">
+    <div class="hero-text">
+      <h1 class="h1" data-i18n="hero.title" data-split="">Empowering anyone to stream <b>anywhere.</b></h1>
+      <p class="lede" data-i18n="hero.lede">Your Android phone or tablet becomes a second monitor, a mirror of your PC, a game screen and, new in 0.2.0, a desk panel with your music, volume and PC stats. Pair it with one QR code.</p>
+      <div class="ctas">
+        <a class="btn fill lg" href="#download"><svg aria-hidden="true"><use href="#i-down"></use></svg><span data-i18n="hero.cta">Get it for Linux</span></a>
+        <a class="btn lg" href="#dock" data-i18n="hero.cta2">Meet the Dock</a>
+        <p class="tagline" data-i18n="hero.tag">v0.2.0 · GPL-3.0<br>free, no account</p>
+      </div>
     </div>
-    <div class="stats">
-      <div><b>3</b><span data-i18n="stat.modes">modes</span></div>
-      <div><b>1</b><span data-i18n="stat.qr">QR to pair</span></div>
-      <div><b>∞</b><span data-i18n="stat.places">places to stream</span></div>
-    </div>
+    <!-- a mesa: monitor e tablet no suporte, lado a lado, com as cotas do catálogo -->
+    <svg class="desk" viewBox="0 0 640 480" role="img" aria-labelledby="deskDesc">
+      <desc id="deskDesc" data-i18n="hero.art">A monitor and, beside it on the same desk, a tablet on a stand showing the OpenAlt Dock playing Circles by Post Malone.</desc>
+      <g class="ink" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round">
+        <rect class="draw" x="8" y="70" width="344" height="214" rx="8" fill="var(--sheet)"></rect>
+        <rect class="draw" x="30" y="92" width="168" height="110" fill="var(--bone)" stroke-width="1.5"></rect>
+        <path class="draw" d="M30 108h168" stroke-width="1.5"></path>
+        <rect class="draw" x="150" y="140" width="178" height="118" fill="var(--bone)" stroke-width="1.5"></rect>
+        <path class="draw" d="M150 156h178" stroke-width="1.5"></path>
+        <path class="draw" d="M164 284v118M196 284v118M118 420v-14h124v14"></path>
+        <path class="draw desk-line" d="M0 420h640" stroke-width="1.5"></path>
+        <path class="draw" d="M476 398l-18 22M532 398l18 22" stroke-width="2"></path>
+      </g>
+      <g class="tablet">
+        <rect x="374" y="234" width="262" height="164" rx="14" fill="#121212"></rect>
+        <image href="img/dock/musica.webp" x="384" y="244" width="242" height="145.2" preserveAspectRatio="xMidYMid slice"></image>
+      </g>
+      <g class="dims" fill="currentColor" stroke="currentColor">
+        <path d="M8 46h44" stroke-width="1"></path><text x="60" y="50" stroke="none" data-i18n="dim.monitor">Monitor · DP-1</text>
+        <path d="M636 210h-36" stroke-width="1"></path><text x="592" y="214" text-anchor="end" stroke="none" data-i18n="dim.tablet">D-01 · Music</text>
+        <path d="M8 444v12M8 450h628M636 444v12" stroke-width="1" fill="none"></path><text x="322" y="474" text-anchor="middle" stroke="none" data-i18n="dim.desk">Same desk · home network</text>
+      </g>
+    </svg>
   </div>
 
-  <div class="mosaic-wrap" aria-hidden="true">
-    <div class="mosaic">
-      <div class="tile t-red"><svg viewBox="0 0 120 120"><path d="M0 120A120 120 0 0 1 120 0V120Z" fill="#26211B"/></svg></div>
-      <div class="tile t-paper"></div>
-      <div class="tile t-sage"><svg viewBox="0 0 120 120"><circle cx="60" cy="60" r="34" fill="#EFE6D6"/><circle cx="60" cy="60" r="14" fill="#4A7350"/></svg></div>
-      <div class="tile t-sun"><svg viewBox="0 0 120 120"><path d="M30 90l30-60 30 60z" fill="#26211B"/></svg></div>
-      <div class="tile t-ink"><svg viewBox="0 0 120 120" fill="none" stroke="#EFE6D6" stroke-width="8" stroke-linecap="round"><path d="M30 70a42 42 0 0 1 60 0M42 82a24 24 0 0 1 36 0"/><circle cx="60" cy="94" r="5" fill="#EFE6D6"/></svg></div>
-      <div class="tile t-pink"></div><div class="tile t-pink"></div>
-      <div class="tile t-paper"><svg viewBox="0 0 120 120"><path d="M0 0H120A120 120 0 0 1 0 120Z" fill="#FF746C"/></svg></div>
-      <div class="tile t-sagel"></div><div class="tile t-pink"></div><div class="tile t-pink"></div>
-      <div class="tile t-ink"><svg viewBox="0 0 120 120"><rect x="34" y="34" width="22" height="22" fill="#EFE6D6"/><rect x="64" y="34" width="22" height="22" fill="#EFE6D6"/><rect x="34" y="64" width="22" height="22" fill="#EFE6D6"/><rect x="70" y="70" width="10" height="10" fill="#FF746C"/></svg></div>
-      <div class="tile t-sun"><svg viewBox="0 0 120 120" fill="none" stroke="#26211B" stroke-width="8" stroke-linejoin="round"><path d="M20 80h80M30 80V56l30-22 30 22v24"/></svg></div>
-      <div class="tile t-paper"></div>
-      <div class="tile t-sage"><svg viewBox="0 0 120 120"><path d="M120 120A120 120 0 0 1 0 0V120Z" fill="#8FBF92"/></svg></div>
-      <div class="tile t-red"></div>
-      <div class="tile t-paper"><svg viewBox="0 0 120 120" fill="none" stroke="#26211B" stroke-width="7" stroke-linecap="round"><path d="M34 52h52c10 0 16 8 16 18s-6 18-16 18c-8 0-12-6-16-10H50c-4 4-8 10-16 10-10 0-16-8-16-18s6-18 16-18z"/></svg></div>
-      <div class="tile t-ink"></div><div class="tile t-pink"></div><div class="tile t-paper"></div>
-    </div>
-    <div class="fd fd-lap hero-lap" style="--w:calc(var(--t) * 2.6); left:calc(var(--t) * .4); top:calc(var(--t) * 2.1)">
-      <div class="lid"><div class="scr"><div class="ui-app"><div class="bar"><i></i><b></b></div><div class="c1"></div><div class="c2"></div><div class="c3"></div><div class="c4"></div></div></div></div><div class="base"></div>
-    </div>
-    <div class="fd fd-phone hero-phone" style="--w:calc(var(--t) * 1); left:calc(var(--t) * 3.35); top:calc(var(--t) * 1.55)">
-      <div class="scr"><div class="ui-phone"><b></b><i></i><div class="pc"></div><div class="qr"></div></div></div>
-    </div>
-    <span class="dim hero-dim1" style="left:calc(var(--t) * .4); top:calc(var(--t) * 4.1)"><span class="rule" style="width:calc(var(--t) * 2.6)"></span></span>
-    <span class="dim" style="left:calc(var(--t) * .9); top:calc(var(--t) * 4.2)" data-i18n="hero.dim1">+ 1 screen · 1080×2400</span>
-    <span class="dim" style="right:0; top:calc(var(--t) * 1.2)" data-i18n="hero.dim2">← side: right · align: top</span>
-  </div>
-  <div class="stamp" aria-hidden="true" data-i18n="stamp">One QR<br>No PIN<br>No account<br>GPL-3.0</div>
+  <!-- índice do catálogo: os cinco modos -->
+  <ol class="wrap index" aria-label="Catalogue" data-i18n-aria="idx.label">
+    <li><a href="#m1"><span class="code">OA-01</span><h2 data-i18n="i1.t">New screen</h2><p data-i18n="i1.p">One more monitor, on any side of any monitor.</p></a></li>
+    <li><a href="#m2"><span class="code">OA-02</span><h2 data-i18n="i2.t">Mirror</h2><p data-i18n="i2.p">Any monitor of your PC, exactly as it is, in your hands.</p></a></li>
+    <li><a href="#m3"><span class="code">OA-03</span><h2 data-i18n="i3.t">Game</h2><p data-i18n="i3.p">Your PC games on the sofa, with or without a controller.</p></a></li>
+    <li><a href="#m4"><span class="code">OA-04</span><h2 data-i18n="i4.t">Away from home</h2><p data-i18n="i4.p">Over 4G, 5G or any Wi-Fi, through Tailscale.</p></a></li>
+    <li class="is-new"><a href="#dock"><span class="code">OA-05 <span class="new" data-i18n="new">New</span></span><h2 data-i18n="i5.t">Dock</h2><p data-i18n="i5.p">A desk panel for your PC, without streaming. Music, controls, stats.</p></a></li>
+  </ol>
 </section>
 
-<!-- ── modos: rolagem lateral ─────────────────────────── -->
-<section class="modes" id="modes" aria-labelledby="modesTitle">
-  <div class="modes-pin">
-    <div class="track" id="track">
-      <div class="panel lead">
-        <p class="eyebrow" data-i18n="modes.eyebrow">01 · Modes</p>
-        <h2 class="h2" id="modesTitle" data-i18n="modes.title">One phone. <em>Four</em> jobs.</h2>
-        <p class="lede" style="margin-top:18px" data-i18n="modes.lede">New screen, mirror, game screen and away from home: pick the one you need, every time you connect.</p>
-      </div>
-
-      <article class="panel" data-panel>
-        <div class="txt"><p class="num">01</p><h3 data-i18n="p1.title">A <em>new</em> screen</h3>
-          <p data-i18n="p1.text">One more monitor, on any side of any monitor. Drag a window over — it opens maximized on the tablet.</p>
-          <span class="tag" data-i18n="p1.tag">side: right · align: center</span></div>
-        <div class="stage" data-wall-root>
-          <div class="blk p-sage" style="right:0;top:0;width:34%;height:40%"></div>
-          <div class="blk p-red" style="right:34%;bottom:0;width:22%;height:22%"></div>
-          <div class="fd fd-lap" data-in style="--w:46%; left:6%; top:34%"><div class="lid"><div class="scr"><div class="ui-wall cont"></div><div class="ui-win" style="left:8%;top:12%;width:46%;height:58%"></div><div class="ui-win" style="left:62%;top:30%;width:50%;height:46%"></div></div></div><div class="base"></div></div>
-          <div class="fd fd-tab" data-in data-from="right" style="--w:34%; left:58%; top:40%"><div class="scr"><div class="ui-wall cont"></div><div class="ui-win" style="left:-12%;top:30%;width:62%;height:48%"></div></div></div>
-        </div>
+<!-- ── os quatro modos com stream ──────────────────────── -->
+<section class="sec modes" id="modes" aria-labelledby="modesTitle">
+  <div class="wrap">
+    <header class="sec-head">
+      <h2 class="h2" id="modesTitle" data-i18n="modes.title">Four ways to <b>stream.</b></h2>
+      <p class="lede" data-i18n="modes.lede">Pick one every time you connect. The PC streams through Sunshine; the phone or tablet shows it with the OpenAlt app.</p>
+    </header>
+    <div class="entries">
+      <article class="entry" id="m1">
+        <svg class="art" viewBox="0 0 240 140" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round">
+          <rect x="8" y="16" width="140" height="88" rx="4"></rect><path d="M58 104v14M40 118h36"></path>
+          <rect x="160" y="40" width="74" height="48" rx="6" stroke-width="3"></rect>
+          <rect x="112" y="46" width="70" height="34" fill="var(--bone)"></rect><path d="M112 54h70"></path>
+          <path d="M26 30h50v28H26z"></path></g></svg>
+        <span class="code">OA-01</span><h3 data-i18n="p1.title">New screen</h3>
+        <p data-i18n="p1.text">A real extra monitor at your device’s own resolution: right, left, above or below any of your monitors. Drag a window over and it opens maximized.</p>
+        <span class="tag" data-i18n="p1.tag">side: right · align: center</span>
       </article>
-
-      <article class="panel" data-panel>
-        <div class="txt"><p class="num">02</p><h3 data-i18n="p2.title"><em>Mirror</em> any monitor</h3>
-          <p data-i18n="p2.text">Show your main screen — or any other — exactly as it is, on the phone or tablet in your hands.</p>
-          <span class="tag" data-i18n="p2.tag">mirror: LG 27″</span></div>
-        <div class="stage">
-          <div class="blk p-pink" style="right:0;top:0;width:44%;height:100%"></div>
-          <div class="blk p-ink" style="left:0;bottom:0;width:20%;height:20%"></div>
-          <svg class="blk" style="left:44%;top:30%;width:18%;height:20%" viewBox="0 0 100 60" fill="none" stroke="#26211B" stroke-width="2.5" stroke-dasharray="3 6" stroke-linecap="round"><path d="M4 30h86M80 20l10 10-10 10"/></svg>
-          <div class="fd fd-lap" data-in style="--w:42%; left:4%; top:26%"><div class="lid"><div class="scr"><div class="ui-app"><div class="bar"><i></i><b></b></div><div class="c1"></div><div class="c2"></div><div class="c3"></div><div class="c4"></div></div></div></div><div class="base"></div></div>
-          <div class="fd fd-tab" data-in data-from="right" style="--w:36%; left:58%; top:36%; rotate:4deg"><div class="scr"><div class="ui-app"><div class="bar"><i></i><b></b></div><div class="c1"></div><div class="c2"></div><div class="c3"></div><div class="c4"></div></div></div></div>
-        </div>
+      <article class="entry" id="m2">
+        <svg class="art" viewBox="0 0 240 140" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round">
+          <rect x="8" y="16" width="140" height="88" rx="4"></rect><path d="M58 104v14M40 118h36"></path>
+          <path d="M24 34h70M24 46h100M24 58h86M24 82h44"></path>
+          <rect x="176" y="22" width="54" height="100" rx="8" stroke-width="3"></rect>
+          <path d="M186 52h26M186 60h36M186 68h31M186 84h16"></path>
+          <path d="M152 60h18M164 54l6 6-6 6" stroke-dasharray="3 4"></path></g></svg>
+        <span class="code">OA-02</span><h3 data-i18n="p2.title">Mirror</h3>
+        <p data-i18n="p2.text">Show your main screen, or any other one, exactly as it is on the phone or tablet in your hands. The sound goes to the device.</p>
+        <span class="tag" data-i18n="p2.tag">mirror: any monitor</span>
       </article>
-
-      <article class="panel" data-panel>
-        <div class="txt"><p class="num">03</p><h3 data-i18n="p3.title">A <em>game</em> screen</h3>
-          <p data-i18n="p3.text">Your PC games on the sofa or in bed, streamed by Sunshine. Plug in a controller if you like.</p>
-          <span class="tag" data-i18n="p3.tag">up to your screen’s Hz</span></div>
-        <div class="stage">
-          <div class="blk p-sun" style="right:0;bottom:0;width:58%;height:46%"></div>
-          <div class="blk p-red" style="right:0;top:0;width:18%;height:22%"></div>
-          <div class="fd fd-phone land" data-in style="--w:58%; left:22%; top:22%"><div class="scr"><div class="ui-game"><span class="car"></span></div></div></div>
-          <svg class="pad" data-in data-from="bottom" style="left:46%;top:64%;width:34%" viewBox="0 0 300 190" aria-hidden="true">
-            <path d="M70 20h160c40 0 60 30 66 70l4 46c3 30-20 50-44 40-16-6-28-26-42-38H86c-14 12-26 32-42 38-24 10-47-10-44-40l4-46C10 50 30 20 70 20z" fill="#FBF6EE" stroke="#26211B" stroke-width="6"/>
-            <path d="M92 62v36M74 80h36" stroke="#26211B" stroke-width="10" stroke-linecap="round"/>
-            <circle cx="212" cy="62" r="11" fill="#FF746C" stroke="#26211B" stroke-width="4"/><circle cx="236" cy="86" r="11" fill="#8FBF92" stroke="#26211B" stroke-width="4"/><circle cx="188" cy="86" r="11" fill="#F2B33D" stroke="#26211B" stroke-width="4"/><circle cx="212" cy="110" r="11" fill="#26211B"/>
-          </svg>
-        </div>
+      <article class="entry" id="m3">
+        <svg class="art" viewBox="0 0 240 140" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round">
+          <rect x="30" y="10" width="180" height="84" rx="10" stroke-width="3"></rect>
+          <path d="M44 80l40-34 26 20 34-30 52 44"></path>
+          <path d="M86 104h68c14 0 22 10 24 22l1 4c1 8-6 12-12 9-5-3-9-8-13-11H86c-4 3-8 8-13 11-6 3-13-1-12-9l1-4c2-12 10-22 24-22z"></path>
+          <path d="M92 116v8M88 120h8"></path><circle cx="146" cy="117" r="2.5"></circle><circle cx="152" cy="123" r="2.5"></circle></g></svg>
+        <span class="code">OA-03</span><h3 data-i18n="p3.title">Game screen</h3>
+        <p data-i18n="p3.text">Your PC games on the sofa or in bed, streamed by Sunshine. Plug in a controller if you like.</p>
+        <span class="tag" data-i18n="p3.tag">up to your screen’s Hz</span>
       </article>
-
-      <article class="panel" data-panel>
-        <div class="txt"><p class="num">04</p><h3 data-i18n="p4.title"><em>Away</em> from home</h3>
-          <p data-i18n="p4.text">Leave the PC at home and take its screen with you — over 4G, 5G or any Wi-Fi, with Tailscale and your own account. No port to open.</p>
-          <span class="tag" data-i18n="p4.tag">encrypted · your account</span></div>
-        <div class="stage">
-          <div class="blk p-ink" style="right:0;top:0;width:28%;height:28%"></div>
-          <div class="blk p-sage" style="left:10%;bottom:0;width:30%;height:16%"></div>
-          <svg class="blk" style="inset:0;width:100%;height:100%" viewBox="0 0 600 600" preserveAspectRatio="none" fill="none" aria-hidden="true">
-            <path class="route" d="M60 520C140 420 220 470 300 380S420 220 540 160" stroke="#26211B" stroke-width="3" stroke-dasharray="2 12" stroke-linecap="round"/>
-          </svg>
-          <span class="pin" style="left:4%;top:80%"><i><svg><use href="#i-home"/></svg></i><span data-i18n="p4.home">Home PC</span><small>Wi-Fi</small></span>
-          <span class="pin" style="left:42%;top:58%"><i><svg><use href="#i-bus"/></svg></i><span data-i18n="p4.bus">On the bus</span><small>4G</small></span>
-          <span class="pin" style="left:70%;top:18%"><i><svg><use href="#i-cafe"/></svg></i><span data-i18n="p4.cafe">Café</span><small>5G</small></span>
-          <div class="fd fd-phone" data-in data-from="bottom" style="--w:16%; left:62%; top:36%; rotate:8deg"><div class="scr"><div class="ui-game"><span class="car"></span></div></div></div>
-        </div>
+      <article class="entry" id="m4">
+        <svg class="art" viewBox="0 0 240 140" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round">
+          <path d="M14 112V84l26-20 26 20v28z"></path><path d="M34 112V96h12v16"></path>
+          <path d="M70 100C110 96 120 60 170 52" stroke-dasharray="2 6" stroke-linecap="round"></path>
+          <rect x="176" y="18" width="50" height="92" rx="8" stroke-width="3"></rect>
+          <text x="84" y="124" font-size="10" stroke="none" fill="currentColor" font-family="var(--mono)">WI-FI</text>
+          <text x="118" y="44" font-size="10" stroke="none" fill="currentColor" font-family="var(--mono)">4G · 5G</text></g></svg>
+        <span class="code">OA-04</span><h3 data-i18n="p4.title">Away from home</h3>
+        <p data-i18n="p4.text">Leave the PC at home and take its screen with you, over 4G, 5G or any Wi-Fi, with Tailscale and your own account. No port to open.</p>
+        <span class="tag" data-i18n="p4.tag">encrypted · your account</span>
       </article>
     </div>
+  </div>
+</section>
+
+<!-- ── o Dock: a página vira noite ─────────────────────── -->
+<section class="sec night dock" id="dock" aria-labelledby="dockTitle">
+  <div class="wrap">
+    <header class="sec-head">
+      <h2 class="h2" id="dockTitle"><span class="code">OA-05</span> <span data-i18n="dock.title">Your tablet becomes the <b>panel of your desk.</b></span></h2>
+      <p class="lede" data-i18n="dock.lede">No stream and no load on your graphics card: the PC only sends data, over your home network, to the devices you paired. Pick “Dock” in the PC app, then tap your PC on the phone.</p>
+    </header>
+    <div class="spread">
+      <figure class="shot">
+        <img src="img/dock/musica.webp" width="1333" height="800" alt="The Dock’s Music page: the cover of Hollywood’s Bleeding, Circles by Post Malone, the time bar and big controls." data-i18n-alt="dock.alt">
+        <figcaption data-i18n="dock.fig">D-01 · Music · tablet lying down</figcaption>
+      </figure>
+      <ol class="pages">
+        <li><span class="code">D-01</span><h3 data-i18n="d1.t">Music</h3><p data-i18n="d1.p">Cover, synced lyrics and big controls. Spotify, YouTube in the browser, VLC. With no lyrics, the cover takes the screen.</p></li>
+        <li><span class="code">D-02</span><h3 data-i18n="d2.t">Controls</h3><p data-i18n="d2.p">Volume up to 150%, output and input, apps playing, shortcuts and a drawer with your PC’s apps and favourites.</p></li>
+        <li><span class="code">D-03</span><h3 data-i18n="d3.t">This PC</h3><p data-i18n="d3.p">Processor and graphics card load and temperature, memory, network and the weather where you are.</p></li>
+        <li><span class="code">D-06</span><h3 data-i18n="d6.t">Clock</h3><p data-i18n="d6.p">When nothing plays, the time, big. The music starts and the player comes back on its own.</p></li>
+        <li><span class="code">D-07</span><h3 data-i18n="d7.t">Edit pages</h3><p data-i18n="d7.p">Hide and reorder pages. Square or rounded corners, your choice.</p></li>
+      </ol>
+    </div>
+    <div class="strip">
+      <figure><img src="img/dock/controles.webp" width="1333" height="800" loading="lazy" alt="D-02 · Controls" data-i18n-alt="dock.s2"><figcaption data-i18n="dock.s2">D-02 · Controls</figcaption></figure>
+      <figure><img src="img/dock/este-pc.webp" width="1333" height="800" loading="lazy" alt="D-03 · This PC" data-i18n-alt="dock.s3"><figcaption data-i18n="dock.s3">D-03 · This PC</figcaption></figure>
+      <figure><img src="img/dock/relogio.webp" width="1333" height="800" loading="lazy" alt="D-06 · Clock" data-i18n-alt="dock.s6"><figcaption data-i18n="dock.s6">D-06 · Clock</figcaption></figure>
+      <figure class="phone"><img src="img/dock/musica-celular.webp" width="412" height="915" loading="lazy" alt="D-01 · phone standing" data-i18n-alt="dock.sp"><figcaption data-i18n="dock.sp">D-01 · phone standing</figcaption></figure>
+    </div>
+    <p class="note" data-i18n="dock.note">Works only at home, on your local network. Screens in Portuguese.</p>
   </div>
 </section>
 
 <!-- ── como funciona ─────────────────────────────────── -->
-<section class="how wrap" id="how" aria-labelledby="howTitle">
-  <p class="eyebrow" data-i18n="how.eyebrow">02 · How it works</p>
-  <h2 class="h2" id="howTitle" data-i18n="how.title">Three steps. <em>Once.</em></h2>
-  <div class="steps">
-    <div class="step"><p class="n">1</p><h3 data-i18n="s1.title">Install on your PC</h3><p data-i18n="s1.text">OpenAlt sets up Sunshine with its own config — yours stays untouched. Linux today, Windows next.</p>
-      <div class="art"><div class="fd-lap" style="--w:150px;position:relative"><div class="lid"><div class="scr"><div class="ui-app"><div class="bar"><i></i><b></b></div><div class="c1"></div><div class="c2"></div><div class="c3"></div><div class="c4"></div></div></div></div><div class="base"></div></div></div></div>
-    <div class="step"><p class="n">2</p><h3 data-i18n="s2.title">Turn it on</h3><p data-i18n="s2.text">Nothing runs until you press the button. Press it again and everything goes back to how it was.</p>
-      <div class="art"><div class="power"><svg aria-hidden="true"><use href="#i-power"/></svg></div></div></div>
-    <div class="step"><p class="n">3</p><h3 data-i18n="s3.title">Scan the QR</h3><p data-i18n="s3.text">Open the OpenAlt app on the phone and point it at the code. It works once and expires in two minutes. No PIN.</p>
-      <div class="art"><div class="qrtile"><svg viewBox="0 0 29 29" shape-rendering="crispEdges" aria-hidden="true"><g fill="#26211B"><path d="M0 0h7v7H0zM22 0h7v7h-7zM0 22h7v7H0z"/><path fill="#FBF6EE" d="M1 1h5v5H1zM23 1h5v5h-5zM1 23h5v5H1z"/><path d="M2 2h3v3H2zM24 2h3v3h-3zM2 24h3v3H2zM9 1h2v2H9zM12 3h2v3h-2zM9 8h4v2H9zM15 9h3v2h-3zM20 9h2v4h-2zM9 12h2v5H9zM13 13h4v2h-4zM18 15h4v2h-4zM23 12h3v2h-3zM24 17h4v2h-4zM12 18h2v4h-2zM16 20h5v2h-5zM9 24h4v2H9zM15 24h2v4h-2zM19 23h2v2h-2zM22 26h5v2h-5zM25 21h3v3h-3z"/><path fill="#FF746C" d="M17 17h2v2h-2z"/></g></svg></div></div></div>
+<section class="sec how" id="how" aria-labelledby="howTitle">
+  <div class="wrap">
+    <header class="sec-head"><h2 class="h2" id="howTitle" data-i18n="how.title">Three steps. <b>Once.</b></h2></header>
+    <ol class="steps">
+      <li><span class="n">01</span><h3 data-i18n="s1.title">Install on your PC</h3><p data-i18n="s1.text">OpenAlt sets up Sunshine with its own config. Yours stays untouched. Linux today, Windows next.</p></li>
+      <li><span class="n">02</span><h3 data-i18n="s2.title">Turn it on</h3><p data-i18n="s2.text">Nothing runs until you press the button. Press it again and everything goes back to how it was.</p></li>
+      <li><span class="n">03</span><h3 data-i18n="s3.title">Scan the QR</h3><p data-i18n="s3.text">Open the OpenAlt app on the phone and point it at the code. It works once and expires in two minutes. No PIN.</p></li>
+    </ol>
   </div>
 </section>
 
 <!-- ── qualquer lado ─────────────────────────────────── -->
-<section class="sides wrap" id="sides" aria-labelledby="sidesTitle">
-  <div class="grid2">
+<section class="sec sides" id="sides" aria-labelledby="sidesTitle">
+  <div class="wrap grid2">
     <div>
-      <p class="eyebrow" data-i18n="sides.eyebrow">03 · Any side</p>
-      <h2 class="h2" id="sidesTitle" data-i18n="sides.title">Any phone. Any side. <em>Any</em> monitor.</h2>
-      <p class="lede" style="margin-top:18px" data-i18n="sides.lede">Right, left, above or below — of any monitor you have. Phone or tablet, standing or lying down. OpenAlt doesn’t assume your setup.</p>
-      <div class="chips"><span data-i18n="chip1">1 · 2 · 3 · 4+ monitors</span><span data-i18n="chip2">phone · tablet</span><span data-i18n="chip3">standing · lying down</span><span data-i18n="chip4">right · left · above · below</span></div>
+      <h2 class="h2" id="sidesTitle" data-i18n="sides.title">Any phone. Any side. <b>Any monitor.</b></h2>
+      <p class="lede" data-i18n="sides.lede">Right, left, above or below any monitor you have. Phone or tablet, standing or lying down. OpenAlt doesn’t assume your setup.</p>
+      <ul class="chips"><li data-i18n="chip1">1 · 2 · 3 · 4+ monitors</li><li data-i18n="chip2">phone · tablet</li><li data-i18n="chip3">standing · lying down</li><li data-i18n="chip4">right · left · above · below</li></ul>
     </div>
     <div class="plan" id="plan" aria-hidden="true">
       <div class="mon" style="left:18%;top:30%;width:24%;height:30%">HDMI-1</div>
@@ -210,56 +331,74 @@
 </section>
 
 <!-- ── aberto e privado ─────────────────────────────── -->
-<section class="open wrap" id="open" aria-labelledby="openTitle">
-  <p class="eyebrow" data-i18n="open.eyebrow">04 · Open source</p>
-  <h2 class="h2" id="openTitle" data-i18n="open.title">Yours. <em>Open.</em> Private.</h2>
-  <div class="cards">
-    <div class="cardx red wide"><b data-i18n="c1.b">Free, forever</b><p data-i18n="c1.p">GPL-3.0. No ads, no account, no tracking. Read every line of the code.</p><a href="https://github.com/berelels/openalt-releases#source-code" data-i18n="c1.a">Source code ↗</a></div>
-    <div class="cardx paper"><b>1 QR</b><p data-i18n="c2.p">Single-use pairing code that expires in two minutes.</p></div>
-    <div class="cardx sage"><b>0</b><p data-i18n="c3.p">ports to open on your router. Away from home it goes through Tailscale, with your own account.</p></div>
-    <div class="cardx ink wide"><b data-i18n="c4.b">Built on giants</b><p data-i18n="c4.p">Streaming by Sunshine (LizardByte) and the Moonlight protocol. The Android app is a fork of Moonlight Android.</p>
-      <a href="https://github.com/moonlight-stream/moonlight-android">Moonlight Android ↗</a></div>
-    <div class="cardx sun"><b>Linux</b><p data-i18n="c5.p">Available now. Windows is next; Wayland after that.</p></div>
-    <div class="cardx pink"><b>Android</b><p data-i18n="c6.p">Any phone or tablet with Android. The app scans the QR and connects on its own.</p></div>
+<section class="sec open" id="open" aria-labelledby="openTitle">
+  <div class="wrap">
+    <header class="sec-head"><h2 class="h2" id="openTitle" data-i18n="open.title">Yours. Open. <b>Private.</b></h2></header>
+    <ul class="facts">
+      <li><b data-i18n="c1.b">Free, forever</b><p data-i18n="c1.p">GPL-3.0. No ads, no account, no tracking. Read every line of the code.</p><a href="https://github.com/berelels/openalt-releases#source-code" data-i18n="c1.a">Source code ↗</a></li>
+      <li><b data-i18n="c2.b">1 QR</b><p data-i18n="c2.p">Single-use pairing code that expires in two minutes.</p></li>
+      <li><b data-i18n="c3.b">0 ports</b><p data-i18n="c3.p">to open on your router. Away from home it goes through Tailscale, with your own account.</p></li>
+      <li><b data-i18n="c4.b">Built on giants</b><p data-i18n="c4.p">Streaming by Sunshine (LizardByte) and the Moonlight protocol. The Android app is a fork of Moonlight Android.</p><a href="https://github.com/moonlight-stream/moonlight-android">Moonlight Android ↗</a></li>
+      <li><b data-i18n="c5.b">Linux</b><p data-i18n="c5.p">Available now, GNOME on X11. Windows is next; Wayland after that.</p></li>
+      <li><b data-i18n="c6.b">Android</b><p data-i18n="c6.p">Any phone or tablet with Android 5 or newer. The app scans the QR and connects on its own.</p></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ── perguntas (as mesmas do JSON-LD FAQPage) ─────── -->
+<section class="sec faq" id="faq" aria-labelledby="faqTitle">
+  <div class="wrap grid2">
+    <header class="sec-head"><h2 class="h2" id="faqTitle" data-i18n="faq.title">Questions, <b>answered.</b></h2></header>
+    <div class="qa">
+      <details open=""><summary data-i18n="q1">What is OpenAlt?</summary><p data-i18n="a1">OpenAlt is a free, open source app that turns an Android phone or tablet into a second monitor, a mirror of a Linux PC, a game screen or a desk panel called the Dock. You install it on the PC and on the device, then pair them by scanning one QR code.</p></details>
+      <details><summary data-i18n="q2">Is OpenAlt free?</summary><p data-i18n="a2">Yes. OpenAlt is licensed under GPL-3.0, with no ads, no account and no subscription. The downloads and the source code of every version are on GitHub.</p></details>
+      <details><summary data-i18n="q3">Which computers does it work on?</summary><p data-i18n="a3">Linux PCs with GNOME on X11 today: an AppImage for any distribution and a .deb for Ubuntu, Debian, Zorin and Pop!_OS. Windows is next; Wayland comes after that.</p></details>
+      <details><summary data-i18n="q4">Which phones and tablets work?</summary><p data-i18n="a4">Any phone or tablet with Android 5 or newer, standing or lying down, placed on any side of any monitor.</p></details>
+      <details><summary data-i18n="q5">What is the Dock mode?</summary><p data-i18n="a5">The Dock, new in version 0.2.0, turns a phone or tablet into a desk panel beside your monitor: music with cover and synced lyrics, volume up to 150% and audio devices, shortcuts and your PC’s apps, processor and graphics card temperature, the weather, and a big clock when nothing plays.</p></details>
+      <details><summary data-i18n="q6">Does the Dock stream video?</summary><p data-i18n="a6">No. The PC only sends data (the song, the volume, the temperatures) over your home network, so it doesn’t load the graphics card. It works only on the local network and only with devices you paired.</p></details>
+      <details><summary data-i18n="q7">Can I use it away from home?</summary><p data-i18n="a7">Yes, to mirror your PC over 4G, 5G or any Wi-Fi, through your own Tailscale account, with no router port to open. The Dock works only at home.</p></details>
+      <details><summary data-i18n="q8">Is it safe?</summary><p data-i18n="a8">Pairing uses a single-use QR code that expires in two minutes, with no PIN. The PC only accepts devices you paired, and forgetting a device cuts it off from the stream and the Dock at once. Nothing about you is sent anywhere.</p></details>
+    </div>
   </div>
 </section>
 
 <!-- ── baixar ─────────────────────────────────────────── -->
-<section class="download wrap" id="download" aria-labelledby="dlTitle">
-  <div class="dl-box">
-    <p class="eyebrow" style="color:var(--red)" data-i18n="dl.eyebrow">Download</p>
-    <h2 class="h2" id="dlTitle" data-i18n="dl.title">Take your PC <em>anywhere.</em></h2>
-    <p class="lede" data-i18n="dl.lede">Install on the PC, get the app on the phone, scan once. Empowering anyone to stream anywhere.</p>
-    <div class="plat">
-      <a class="btn red" href="https://github.com/berelels/openalt-releases/releases/download/v0.2.0/openalt-0.2.0-x86_64.AppImage"><svg aria-hidden="true"><use href="#i-down"/></svg><span data-i18n="dl.linux">PC · Linux</span></a>
-      <a class="btn" href="https://github.com/berelels/openalt-releases/releases/download/v0.2.0/openalt-0.2.0.apk"><svg aria-hidden="true"><use href="#i-down"/></svg><span data-i18n="dl.android">Phone · Android</span></a>
-      <a class="btn" aria-disabled="true" tabindex="-1"><span data-i18n="dl.windows">Windows · coming soon</span></a>
-      <a class="btn" href="https://github.com/berelels/openalt-releases"><svg aria-hidden="true"><use href="#i-gh"/></svg>GitHub</a>
-    </div>
-    <div class="stamp" aria-hidden="true" data-i18n="stamp">One QR<br>No PIN<br>No account<br>GPL-3.0</div>
-    <div class="dl-tiles" aria-hidden="true">
-      <div class="tile t-red"><svg viewBox="0 0 120 120"><path d="M0 120A120 120 0 0 1 120 0V120Z" fill="#26211B"/></svg></div><div class="tile t-sun"></div><div class="tile t-sage"><svg viewBox="0 0 120 120"><circle cx="60" cy="60" r="34" fill="#EFE6D6"/><circle cx="60" cy="60" r="14" fill="#4A7350"/></svg></div>
+<section class="sec download" id="download" aria-labelledby="dlTitle">
+  <div class="wrap">
+    <div class="dl">
+      <h2 class="h2" id="dlTitle" data-i18n="dl.title">Take your PC <b>anywhere.</b></h2>
+      <p class="lede" data-i18n="dl.lede">Install on the PC, get the app on the phone, scan once. Empowering anyone to stream anywhere.</p>
+      <div class="plat">
+        <a class="btn inv lg" href="https://github.com/berelels/openalt-releases/releases/download/v0.2.0/openalt-0.2.0-x86_64.AppImage"><svg aria-hidden="true"><use href="#i-down"></use></svg><span data-i18n="dl.linux">PC · Linux AppImage</span></a>
+        <a class="btn lg" href="https://github.com/berelels/openalt-releases/releases/download/v0.2.0/openalt-0.2.0-amd64.deb"><svg aria-hidden="true"><use href="#i-down"></use></svg><span data-i18n="dl.deb">PC · .deb</span></a>
+        <a class="btn lg" href="https://github.com/berelels/openalt-releases/releases/download/v0.2.0/openalt-0.2.0.apk"><svg aria-hidden="true"><use href="#i-down"></use></svg><span data-i18n="dl.android">Phone · Android APK</span></a>
+        <a class="btn lg" href="https://github.com/berelels/openalt-releases"><svg aria-hidden="true"><use href="#i-gh"></use></svg>GitHub</a>
+      </div>
+      <p class="tagline"><span data-i18n="dl.windows">Windows · coming soon</span> · v0.2.0 · SHA256SUMS</p>
     </div>
   </div>
 </section>
 </main>
 
-<footer class="foot wrap">
-  <div class="cols">
+<footer class="foot">
+  <div class="wrap cols">
     <div>
-      <a class="logo" href="#top"><svg viewBox="64 120 380 300" fill="none" stroke="currentColor" stroke-width="40" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M86 156c62-2 108-6 136 16 30 24 26 80 40 124 18 56 78 92 126 64 40-24 30-90-14-96-50-8-72 52-40 92 22 28 62 34 92 24"/><path d="M270 152c50-8 96-10 144-6"/></svg><span>Open<em>Alt</em></span></a>
+      <a class="brand" href="#top"><svg aria-hidden="true"><use href="#i-logo"></use></svg><b>OPENALT</b></a>
       <p class="sig"><span data-i18n="foot.by">Made by</span> <a href="https://berelels.github.io">Catta Studios</a> · \ catta studios</p>
     </div>
-    <div><h4 data-i18n="foot.project">Project</h4><ul>
+    <div><h3 data-i18n="foot.project">Project</h3><ul>
       <li><a href="https://github.com/berelels/openalt-releases#source-code" data-i18n="foot.source">Source code</a></li>
       <li><a href="https://github.com/berelels/openalt-releases/releases" data-i18n="foot.releases">Releases</a></li>
       <li><a href="https://github.com/berelels/openalt-releases/blob/main/LICENSE">GPL-3.0</a></li></ul></div>
-    <div><h4 data-i18n="foot.built">Built on</h4><ul>
+    <div><h3 data-i18n="foot.built">Built on</h3><ul>
       <li><a href="https://github.com/moonlight-stream/moonlight-android">Moonlight Android</a></li>
       <li><a href="https://github.com/moonlight-stream/moonlight-common-c">moonlight-common-c</a></li>
       <li><a href="https://github.com/LizardByte/Sunshine">Sunshine</a></li>
       <li><a href="https://github.com/tailscale/tailscale">Tailscale</a></li></ul></div>
   </div>
 </footer>
-</body>
-</html>
+
+
+
+
+</body></html>

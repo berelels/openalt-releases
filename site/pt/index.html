@@ -1,0 +1,404 @@
+<!doctype html>
+<html lang="pt-BR"><head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Fonte: esta página (inglês). pt/ e es/ são geradas dela por scripts/idiomas.mjs; não edite as cópias. -->
+  <title data-i18n="meta.title">OpenAlt — O celular como segundo monitor, espelho ou painel de mesa do PC</title>
+  <meta name="description" data-i18n-content="meta.desc" content="App livre e de código aberto que transforma o celular ou tablet Android em segundo monitor, espelho do PC Linux, tela de jogo ou painel de mesa com música, letra e controles. Pareie com um QR code.">
+  <meta name="theme-color" content="#ECE9E2">
+  <link rel="canonical" href="https://cattastudios.com.br/openalt-releases/pt/">
+  <link rel="alternate" hreflang="en" href="https://cattastudios.com.br/openalt-releases/">
+  <link rel="alternate" hreflang="pt-BR" href="https://cattastudios.com.br/openalt-releases/pt/">
+  <link rel="alternate" hreflang="es" href="https://cattastudios.com.br/openalt-releases/es/">
+  <link rel="alternate" hreflang="x-default" href="https://cattastudios.com.br/openalt-releases/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="OpenAlt">
+  <meta property="og:url" content="https://cattastudios.com.br/openalt-releases/pt/">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:title" data-i18n-content="og.title" content="OpenAlt — Qualquer pessoa transmitindo de qualquer lugar">
+  <meta property="og:description" data-i18n-content="og.desc" content="O celular ou tablet Android como segundo monitor, espelho, tela de jogo ou painel de mesa do PC. Livre e de código aberto.">
+  <meta property="og:image" content="https://cattastudios.com.br/openalt-releases/img/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="../img/icon.svg" type="image/svg+xml">
+  <link rel="preload" href="../fonts/hanken-grotesk-wght.ttf" as="font" type="font/ttf" crossorigin="">
+  <link rel="stylesheet" href="../css/site.css">
+  <link rel="stylesheet" href="../css/intro.css">
+  <script type="application/ld+json" id="ld-app">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "OpenAlt",
+  "url": "https://cattastudios.com.br/openalt-releases/pt/",
+  "description": "App livre e de código aberto que transforma o celular ou tablet Android em segundo monitor, espelho do PC Linux, tela de jogo ou painel de mesa com música, letra e controles. Pareie com um QR code.",
+  "inLanguage": "pt-BR",
+  "applicationCategory": "UtilitiesApplication",
+  "operatingSystem": "Linux (GNOME on X11), Android 5+",
+  "softwareVersion": "0.2.0",
+  "license": "https://www.gnu.org/licenses/gpl-3.0.html",
+  "isAccessibleForFree": true,
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  },
+  "downloadUrl": "https://github.com/berelels/openalt-releases/releases/tag/v0.2.0",
+  "screenshot": "https://cattastudios.com.br/openalt-releases/img/dock/musica.webp",
+  "image": "https://cattastudios.com.br/openalt-releases/img/og.png",
+  "featureList": [
+    "Nova tela: Mais um monitor, de qualquer lado de qualquer monitor.",
+    "Espelho: Qualquer monitor do PC, igualzinho, na sua mão.",
+    "Jogo: Os jogos do PC no sofá, com ou sem controle.",
+    "Fora de casa: No 4G, no 5G ou em qualquer Wi-Fi, pelo Tailscale.",
+    "Dock: Painel de mesa do PC, sem stream. Música, controles, status."
+  ],
+  "author": {
+    "@type": "Organization",
+    "name": "Catta Studios",
+    "url": "https://berelels.github.io"
+  },
+  "codeRepository": "https://github.com/berelels/openalt-releases"
+}
+</script>
+  <script type="application/ld+json" id="ld-faq">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "inLanguage": "pt-BR",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "O que é o OpenAlt?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "O OpenAlt é um app livre e de código aberto que transforma o celular ou tablet Android em segundo monitor, espelho do PC Linux, tela de jogo ou painel de mesa, o Dock. Você instala no PC e no aparelho e pareia os dois escaneando um QR code."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "O OpenAlt é grátis?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sim. O OpenAlt usa a licença GPL-3.0, sem anúncio, sem conta e sem assinatura. Os downloads e o código-fonte de cada versão ficam no GitHub."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Em quais computadores funciona?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Hoje, em PCs Linux com GNOME no X11: um AppImage para qualquer distribuição e um .deb para Ubuntu, Debian, Zorin e Pop!_OS. O Windows vem em seguida; depois, o Wayland."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Quais celulares e tablets funcionam?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Qualquer celular ou tablet com Android 5 ou mais novo, em pé ou deitado, em qualquer lado de qualquer monitor."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "O que é o modo Dock?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "O Dock, novidade da versão 0.2.0, transforma o celular ou tablet num painel de mesa ao lado do monitor: música com capa e letra sincronizada, volume até 150% e saídas de som, atalhos e os apps do PC, temperatura do processador e da placa de vídeo, o clima e um relógio grande quando nada toca."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "O Dock transmite vídeo?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Não. O PC manda só os dados (a música, o volume, as temperaturas) pela rede de casa, então não pesa na placa de vídeo. Funciona só na rede local e só com os aparelhos que você pareou."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Dá para usar fora de casa?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sim, para espelhar o PC no 4G, no 5G ou em qualquer Wi-Fi, pela sua própria conta do Tailscale, sem abrir porta no roteador. O Dock funciona só em casa."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "É seguro?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "O pareamento usa um QR code de uso único que vence em dois minutos, sem PIN. O PC só aceita os aparelhos que você pareou, e esquecer um aparelho corta o stream e o Dock de uma vez. Nada sobre você é enviado a lugar nenhum."
+      }
+    }
+  ]
+}
+</script>
+  <script src="../vendor/gsap.min.js" defer=""></script>
+  <script src="../vendor/ScrollTrigger.min.js" defer=""></script>
+  <script src="../js/i18n.js" defer=""></script>
+  <script src="../js/intro.js" defer=""></script>
+  <script src="../js/main.js" defer=""></script>
+  <!-- sem JavaScript, sem abertura: a página aparece direto -->
+  <noscript><style>.intro { display: none; } body.intro-on { overflow: auto; }</style></noscript>
+</head>
+<body class="intro-on">
+<!-- a abertura dos apps (js/intro.js, cópia de desktop/src/renderer/intro.ts); aqui não dá para pular -->
+<div class="intro boot" id="intro" aria-hidden="true"></div>
+<a class="skip" href="#main" data-i18n="skip">Pular para o conteúdo</a>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-logo" viewBox="64 120 380 300" fill="none" stroke="currentColor" stroke-width="40" stroke-linecap="round" stroke-linejoin="round"><path d="M86 156c62-2 108-6 136 16 30 24 26 80 40 124 18 56 78 92 126 64 40-24 30-90-14-96-50-8-72 52-40 92 22 28 62 34 92 24"></path><path d="M270 152c50-8 96-10 144-6"></path></symbol>
+    <symbol id="i-down" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v12M6 11l6 6 6-6M5 20h14"></path></symbol>
+    <symbol id="i-gh" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.9 1.53 2.35 1.09 2.92.83.09-.65.35-1.09.64-1.34-2.22-.25-4.56-1.11-4.56-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02a9.5 9.5 0 0 1 5 0c1.91-1.29 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.69-4.57 4.93.36.31.68.92.68 1.86v2.76c0 .27.18.58.69.48A10 10 0 0 0 12 2z"></path></symbol>
+    <symbol id="i-plus" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M12 5v14M5 12h14"></path></symbol>
+  </defs>
+</svg>
+
+<header class="nav" id="nav">
+  <div class="wrap bar">
+    <a class="brand" href="#top" aria-label="OpenAlt"><svg aria-hidden="true"><use href="#i-logo"></use></svg><b>OPENALT</b><span class="code">OA-00</span></a>
+    <nav class="links" aria-label="Seções" data-i18n-aria="nav.label">
+      <a href="#modes" data-i18n="nav.modes">Modos</a><a href="#dock" data-i18n="nav.dock">Dock</a><a href="#how" data-i18n="nav.how">Como funciona</a><a href="#faq" data-i18n="nav.faq">Perguntas</a>
+    </nav>
+    <div class="lang" role="group" aria-label="Idioma" data-i18n-aria="lang.label">
+      <a data-lang-link="en" href="../" hreflang="en">EN</a><a data-lang-link="pt" href="./" hreflang="pt-BR" aria-current="true">PT</a><a data-lang-link="es" href="../es/" hreflang="es">ES</a>
+    </div>
+    <a class="btn fill small" href="#download"><svg aria-hidden="true"><use href="#i-down"></use></svg><span data-i18n="nav.download">Baixar</span></a>
+  </div>
+</header>
+
+<main id="main">
+<!-- ── herói: a ficha do catálogo ───────────────────────── -->
+<section class="hero" id="top">
+  <div class="wrap hero-grid">
+    <div class="hero-text">
+      <h1 class="h1" data-i18n="hero.title" data-split="">Qualquer pessoa transmitindo <b>de qualquer lugar.</b></h1>
+      <p class="lede" data-i18n="hero.lede">O celular ou tablet Android vira segundo monitor, espelho do PC, tela de jogo e, novidade da 0.2.0, um painel de mesa com a sua música, o volume e o status do PC. Pareia com um QR code.</p>
+      <div class="ctas">
+        <a class="btn fill lg" href="#download"><svg aria-hidden="true"><use href="#i-down"></use></svg><span data-i18n="hero.cta">Baixar para Linux</span></a>
+        <a class="btn lg" href="#dock" data-i18n="hero.cta2">Conhecer o Dock</a>
+        <p class="tagline" data-i18n="hero.tag">v0.2.0 · GPL-3.0<br>grátis, sem conta</p>
+      </div>
+    </div>
+    <!-- a mesa: monitor e tablet no suporte, lado a lado, com as cotas do catálogo -->
+    <svg class="desk" viewBox="0 0 640 480" role="img" aria-labelledby="deskDesc">
+      <desc id="deskDesc" data-i18n="hero.art">Um monitor e, ao lado dele na mesma mesa, um tablet num suporte mostrando o Dock do OpenAlt tocando Circles, de Post Malone.</desc>
+      <g class="ink" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round">
+        <rect class="draw" x="8" y="70" width="344" height="214" rx="8" fill="var(--sheet)"></rect>
+        <rect class="draw" x="30" y="92" width="168" height="110" fill="var(--bone)" stroke-width="1.5"></rect>
+        <path class="draw" d="M30 108h168" stroke-width="1.5"></path>
+        <rect class="draw" x="150" y="140" width="178" height="118" fill="var(--bone)" stroke-width="1.5"></rect>
+        <path class="draw" d="M150 156h178" stroke-width="1.5"></path>
+        <path class="draw" d="M164 284v118M196 284v118M118 420v-14h124v14"></path>
+        <path class="draw desk-line" d="M0 420h640" stroke-width="1.5"></path>
+        <path class="draw" d="M476 398l-18 22M532 398l18 22" stroke-width="2"></path>
+      </g>
+      <g class="tablet">
+        <rect x="374" y="234" width="262" height="164" rx="14" fill="#121212"></rect>
+        <image href="../img/dock/musica.webp" x="384" y="244" width="242" height="145.2" preserveAspectRatio="xMidYMid slice"></image>
+      </g>
+      <g class="dims" fill="currentColor" stroke="currentColor">
+        <path d="M8 46h44" stroke-width="1"></path><text x="60" y="50" stroke="none" data-i18n="dim.monitor">Monitor · DP-1</text>
+        <path d="M636 210h-36" stroke-width="1"></path><text x="592" y="214" text-anchor="end" stroke="none" data-i18n="dim.tablet">D-01 · Música</text>
+        <path d="M8 444v12M8 450h628M636 444v12" stroke-width="1" fill="none"></path><text x="322" y="474" text-anchor="middle" stroke="none" data-i18n="dim.desk">Mesma mesa · rede de casa</text>
+      </g>
+    </svg>
+  </div>
+
+  <!-- índice do catálogo: os cinco modos -->
+  <ol class="wrap index" aria-label="Catálogo" data-i18n-aria="idx.label">
+    <li><a href="#m1"><span class="code">OA-01</span><h2 data-i18n="i1.t">Nova tela</h2><p data-i18n="i1.p">Mais um monitor, de qualquer lado de qualquer monitor.</p></a></li>
+    <li><a href="#m2"><span class="code">OA-02</span><h2 data-i18n="i2.t">Espelho</h2><p data-i18n="i2.p">Qualquer monitor do PC, igualzinho, na sua mão.</p></a></li>
+    <li><a href="#m3"><span class="code">OA-03</span><h2 data-i18n="i3.t">Jogo</h2><p data-i18n="i3.p">Os jogos do PC no sofá, com ou sem controle.</p></a></li>
+    <li><a href="#m4"><span class="code">OA-04</span><h2 data-i18n="i4.t">Fora de casa</h2><p data-i18n="i4.p">No 4G, no 5G ou em qualquer Wi-Fi, pelo Tailscale.</p></a></li>
+    <li class="is-new"><a href="#dock"><span class="code">OA-05 <span class="new" data-i18n="new">Novo</span></span><h2 data-i18n="i5.t">Dock</h2><p data-i18n="i5.p">Painel de mesa do PC, sem stream. Música, controles, status.</p></a></li>
+  </ol>
+</section>
+
+<!-- ── os quatro modos com stream ──────────────────────── -->
+<section class="sec modes" id="modes" aria-labelledby="modesTitle">
+  <div class="wrap">
+    <header class="sec-head">
+      <h2 class="h2" id="modesTitle" data-i18n="modes.title">Quatro jeitos de <b>transmitir.</b></h2>
+      <p class="lede" data-i18n="modes.lede">Você escolhe a cada conexão. O PC transmite pelo Sunshine; o celular ou tablet mostra com o app do OpenAlt.</p>
+    </header>
+    <div class="entries">
+      <article class="entry" id="m1">
+        <svg class="art" viewBox="0 0 240 140" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round">
+          <rect x="8" y="16" width="140" height="88" rx="4"></rect><path d="M58 104v14M40 118h36"></path>
+          <rect x="160" y="40" width="74" height="48" rx="6" stroke-width="3"></rect>
+          <rect x="112" y="46" width="70" height="34" fill="var(--bone)"></rect><path d="M112 54h70"></path>
+          <path d="M26 30h50v28H26z"></path></g></svg>
+        <span class="code">OA-01</span><h3 data-i18n="p1.title">Nova tela</h3>
+        <p data-i18n="p1.text">Um monitor extra de verdade, na resolução do aparelho: à direita, à esquerda, acima ou abaixo de qualquer monitor. Arraste uma janela até ele e ela abre maximizada.</p>
+        <span class="tag" data-i18n="p1.tag">lado: direita · alinhar: centro</span>
+      </article>
+      <article class="entry" id="m2">
+        <svg class="art" viewBox="0 0 240 140" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round">
+          <rect x="8" y="16" width="140" height="88" rx="4"></rect><path d="M58 104v14M40 118h36"></path>
+          <path d="M24 34h70M24 46h100M24 58h86M24 82h44"></path>
+          <rect x="176" y="22" width="54" height="100" rx="8" stroke-width="3"></rect>
+          <path d="M186 52h26M186 60h36M186 68h31M186 84h16"></path>
+          <path d="M152 60h18M164 54l6 6-6 6" stroke-dasharray="3 4"></path></g></svg>
+        <span class="code">OA-02</span><h3 data-i18n="p2.title">Espelho</h3>
+        <p data-i18n="p2.text">Mostre a tela principal, ou qualquer outra, exatamente como ela está, no celular ou tablet na sua mão. O som vai para o aparelho.</p>
+        <span class="tag" data-i18n="p2.tag">espelhar: qualquer monitor</span>
+      </article>
+      <article class="entry" id="m3">
+        <svg class="art" viewBox="0 0 240 140" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round">
+          <rect x="30" y="10" width="180" height="84" rx="10" stroke-width="3"></rect>
+          <path d="M44 80l40-34 26 20 34-30 52 44"></path>
+          <path d="M86 104h68c14 0 22 10 24 22l1 4c1 8-6 12-12 9-5-3-9-8-13-11H86c-4 3-8 8-13 11-6 3-13-1-12-9l1-4c2-12 10-22 24-22z"></path>
+          <path d="M92 116v8M88 120h8"></path><circle cx="146" cy="117" r="2.5"></circle><circle cx="152" cy="123" r="2.5"></circle></g></svg>
+        <span class="code">OA-03</span><h3 data-i18n="p3.title">Tela de jogo</h3>
+        <p data-i18n="p3.text">Os jogos do PC no sofá ou na cama, transmitidos pelo Sunshine. Ligue um controle, se quiser.</p>
+        <span class="tag" data-i18n="p3.tag">até os Hz da sua tela</span>
+      </article>
+      <article class="entry" id="m4">
+        <svg class="art" viewBox="0 0 240 140" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round">
+          <path d="M14 112V84l26-20 26 20v28z"></path><path d="M34 112V96h12v16"></path>
+          <path d="M70 100C110 96 120 60 170 52" stroke-dasharray="2 6" stroke-linecap="round"></path>
+          <rect x="176" y="18" width="50" height="92" rx="8" stroke-width="3"></rect>
+          <text x="84" y="124" font-size="10" stroke="none" fill="currentColor" font-family="var(--mono)">WI-FI</text>
+          <text x="118" y="44" font-size="10" stroke="none" fill="currentColor" font-family="var(--mono)">4G · 5G</text></g></svg>
+        <span class="code">OA-04</span><h3 data-i18n="p4.title">Fora de casa</h3>
+        <p data-i18n="p4.text">Deixe o PC em casa e leve a tela dele com você, no 4G, no 5G ou em qualquer Wi-Fi, com o Tailscale e a sua própria conta. Sem abrir porta.</p>
+        <span class="tag" data-i18n="p4.tag">criptografado · a sua conta</span>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ── o Dock: a página vira noite ─────────────────────── -->
+<section class="sec night dock" id="dock" aria-labelledby="dockTitle">
+  <div class="wrap">
+    <header class="sec-head">
+      <h2 class="h2" id="dockTitle"><span class="code">OA-05</span> <span data-i18n="dock.title">O tablet vira o <b>painel da sua mesa.</b></span></h2>
+      <p class="lede" data-i18n="dock.lede">Sem stream e sem pesar na placa de vídeo: o PC manda só os dados, pela rede de casa, para os aparelhos que você pareou. Escolha “Dock” no app do PC e toque no PC no celular.</p>
+    </header>
+    <div class="spread">
+      <figure class="shot">
+        <img src="../img/dock/musica.webp" width="1333" height="800" alt="A página Música do Dock: a capa de Hollywood’s Bleeding, Circles de Post Malone, a barra de tempo e os controles grandes." data-i18n-alt="dock.alt">
+        <figcaption data-i18n="dock.fig">D-01 · Música · tablet deitado</figcaption>
+      </figure>
+      <ol class="pages">
+        <li><span class="code">D-01</span><h3 data-i18n="d1.t">Música</h3><p data-i18n="d1.p">Capa, letra sincronizada e controles grandes. Spotify, YouTube no navegador, VLC. Sem letra, a capa ocupa a tela.</p></li>
+        <li><span class="code">D-02</span><h3 data-i18n="d2.t">Controles</h3><p data-i18n="d2.p">Volume até 150%, saída e entrada de som, apps tocando, atalhos e a gaveta de apps do PC com favoritos.</p></li>
+        <li><span class="code">D-03</span><h3 data-i18n="d3.t">Este PC</h3><p data-i18n="d3.p">Uso e temperatura do processador e da placa de vídeo, memória, rede e o clima de onde você está.</p></li>
+        <li><span class="code">D-06</span><h3 data-i18n="d6.t">Relógio</h3><p data-i18n="d6.p">Quando nada toca, a hora grande. A música começa e o player volta sozinho.</p></li>
+        <li><span class="code">D-07</span><h3 data-i18n="d7.t">Editar páginas</h3><p data-i18n="d7.p">Esconda e reordene as páginas. Cantos retos ou arredondados, você escolhe.</p></li>
+      </ol>
+    </div>
+    <div class="strip">
+      <figure><img src="../img/dock/controles.webp" width="1333" height="800" loading="lazy" alt="D-02 · Controles" data-i18n-alt="dock.s2"><figcaption data-i18n="dock.s2">D-02 · Controles</figcaption></figure>
+      <figure><img src="../img/dock/este-pc.webp" width="1333" height="800" loading="lazy" alt="D-03 · Este PC" data-i18n-alt="dock.s3"><figcaption data-i18n="dock.s3">D-03 · Este PC</figcaption></figure>
+      <figure><img src="../img/dock/relogio.webp" width="1333" height="800" loading="lazy" alt="D-06 · Relógio" data-i18n-alt="dock.s6"><figcaption data-i18n="dock.s6">D-06 · Relógio</figcaption></figure>
+      <figure class="phone"><img src="../img/dock/musica-celular.webp" width="412" height="915" loading="lazy" alt="D-01 · celular em pé" data-i18n-alt="dock.sp"><figcaption data-i18n="dock.sp">D-01 · celular em pé</figcaption></figure>
+    </div>
+    <p class="note" data-i18n="dock.note">Funciona só em casa, na rede local.</p>
+  </div>
+</section>
+
+<!-- ── como funciona ─────────────────────────────────── -->
+<section class="sec how" id="how" aria-labelledby="howTitle">
+  <div class="wrap">
+    <header class="sec-head"><h2 class="h2" id="howTitle" data-i18n="how.title">Três passos. <b>Uma vez.</b></h2></header>
+    <ol class="steps">
+      <li><span class="n">01</span><h3 data-i18n="s1.title">Instale no PC</h3><p data-i18n="s1.text">O OpenAlt prepara o Sunshine com uma configuração só dele. A sua fica intacta. Linux hoje, Windows em seguida.</p></li>
+      <li><span class="n">02</span><h3 data-i18n="s2.title">Ligue</h3><p data-i18n="s2.text">Nada roda até você apertar o botão. Apertou de novo, tudo volta a ser como era.</p></li>
+      <li><span class="n">03</span><h3 data-i18n="s3.title">Escaneie o QR</h3><p data-i18n="s3.text">Abra o app do OpenAlt no celular e aponte para o código. Ele vale uma vez e expira em dois minutos. Sem PIN.</p></li>
+    </ol>
+  </div>
+</section>
+
+<!-- ── qualquer lado ─────────────────────────────────── -->
+<section class="sec sides" id="sides" aria-labelledby="sidesTitle">
+  <div class="wrap grid2">
+    <div>
+      <h2 class="h2" id="sidesTitle" data-i18n="sides.title">Qualquer celular. Qualquer lado. <b>Qualquer monitor.</b></h2>
+      <p class="lede" data-i18n="sides.lede">À direita, à esquerda, acima ou abaixo de qualquer monitor seu. Celular ou tablet, em pé ou deitado. O OpenAlt não supõe nada do seu PC.</p>
+      <ul class="chips"><li data-i18n="chip1">1 · 2 · 3 · 4+ monitores</li><li data-i18n="chip2">celular · tablet</li><li data-i18n="chip3">em pé · deitado</li><li data-i18n="chip4">direita · esquerda · acima · abaixo</li></ul>
+    </div>
+    <div class="plan" id="plan" aria-hidden="true">
+      <div class="mon" style="left:18%;top:30%;width:24%;height:30%">HDMI-1</div>
+      <div class="mon primary" style="left:42%;top:24%;width:36%;height:40%">DP-1 ★</div>
+      <div class="dev" id="planDev"></div>
+      <p class="readout"><span data-i18n="plan.side">lado</span>: <b id="planSide">right</b> · <span data-i18n="plan.of">de</span>: <b id="planOf">DP-1</b></p>
+    </div>
+  </div>
+</section>
+
+<!-- ── aberto e privado ─────────────────────────────── -->
+<section class="sec open" id="open" aria-labelledby="openTitle">
+  <div class="wrap">
+    <header class="sec-head"><h2 class="h2" id="openTitle" data-i18n="open.title">Seu. Aberto. <b>Privado.</b></h2></header>
+    <ul class="facts">
+      <li><b data-i18n="c1.b">Grátis, para sempre</b><p data-i18n="c1.p">GPL-3.0. Sem anúncio, sem conta, sem rastreio. Leia cada linha do código.</p><a href="https://github.com/berelels/openalt-releases#source-code" data-i18n="c1.a">Código-fonte ↗</a></li>
+      <li><b data-i18n="c2.b">1 QR</b><p data-i18n="c2.p">Código de pareamento de uso único, que vence em dois minutos.</p></li>
+      <li><b data-i18n="c3.b">0 portas</b><p data-i18n="c3.p">para abrir no roteador. Fora de casa, passa pelo Tailscale, com a sua própria conta.</p></li>
+      <li><b data-i18n="c4.b">Em ombros de gigantes</b><p data-i18n="c4.p">Transmissão pelo Sunshine (LizardByte) e pelo protocolo do Moonlight. O app Android é um fork do Moonlight Android.</p><a href="https://github.com/moonlight-stream/moonlight-android">Moonlight Android ↗</a></li>
+      <li><b data-i18n="c5.b">Linux</b><p data-i18n="c5.p">Disponível agora, GNOME no X11. Windows é o próximo; depois, Wayland.</p></li>
+      <li><b data-i18n="c6.b">Android</b><p data-i18n="c6.p">Qualquer celular ou tablet com Android 5 ou mais novo. O app escaneia o QR e conecta sozinho.</p></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ── perguntas (as mesmas do JSON-LD FAQPage) ─────── -->
+<section class="sec faq" id="faq" aria-labelledby="faqTitle">
+  <div class="wrap grid2">
+    <header class="sec-head"><h2 class="h2" id="faqTitle" data-i18n="faq.title">Perguntas, <b>respondidas.</b></h2></header>
+    <div class="qa">
+      <details open=""><summary data-i18n="q1">O que é o OpenAlt?</summary><p data-i18n="a1">O OpenAlt é um app livre e de código aberto que transforma o celular ou tablet Android em segundo monitor, espelho do PC Linux, tela de jogo ou painel de mesa, o Dock. Você instala no PC e no aparelho e pareia os dois escaneando um QR code.</p></details>
+      <details><summary data-i18n="q2">O OpenAlt é grátis?</summary><p data-i18n="a2">Sim. O OpenAlt usa a licença GPL-3.0, sem anúncio, sem conta e sem assinatura. Os downloads e o código-fonte de cada versão ficam no GitHub.</p></details>
+      <details><summary data-i18n="q3">Em quais computadores funciona?</summary><p data-i18n="a3">Hoje, em PCs Linux com GNOME no X11: um AppImage para qualquer distribuição e um .deb para Ubuntu, Debian, Zorin e Pop!_OS. O Windows vem em seguida; depois, o Wayland.</p></details>
+      <details><summary data-i18n="q4">Quais celulares e tablets funcionam?</summary><p data-i18n="a4">Qualquer celular ou tablet com Android 5 ou mais novo, em pé ou deitado, em qualquer lado de qualquer monitor.</p></details>
+      <details><summary data-i18n="q5">O que é o modo Dock?</summary><p data-i18n="a5">O Dock, novidade da versão 0.2.0, transforma o celular ou tablet num painel de mesa ao lado do monitor: música com capa e letra sincronizada, volume até 150% e saídas de som, atalhos e os apps do PC, temperatura do processador e da placa de vídeo, o clima e um relógio grande quando nada toca.</p></details>
+      <details><summary data-i18n="q6">O Dock transmite vídeo?</summary><p data-i18n="a6">Não. O PC manda só os dados (a música, o volume, as temperaturas) pela rede de casa, então não pesa na placa de vídeo. Funciona só na rede local e só com os aparelhos que você pareou.</p></details>
+      <details><summary data-i18n="q7">Dá para usar fora de casa?</summary><p data-i18n="a7">Sim, para espelhar o PC no 4G, no 5G ou em qualquer Wi-Fi, pela sua própria conta do Tailscale, sem abrir porta no roteador. O Dock funciona só em casa.</p></details>
+      <details><summary data-i18n="q8">É seguro?</summary><p data-i18n="a8">O pareamento usa um QR code de uso único que vence em dois minutos, sem PIN. O PC só aceita os aparelhos que você pareou, e esquecer um aparelho corta o stream e o Dock de uma vez. Nada sobre você é enviado a lugar nenhum.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- ── baixar ─────────────────────────────────────────── -->
+<section class="sec download" id="download" aria-labelledby="dlTitle">
+  <div class="wrap">
+    <div class="dl">
+      <h2 class="h2" id="dlTitle" data-i18n="dl.title">Leve o seu PC <b>para qualquer lugar.</b></h2>
+      <p class="lede" data-i18n="dl.lede">Instale no PC, baixe o app no celular, escaneie uma vez. Qualquer pessoa transmitindo de qualquer lugar.</p>
+      <div class="plat">
+        <a class="btn inv lg" href="https://github.com/berelels/openalt-releases/releases/download/v0.2.0/openalt-0.2.0-x86_64.AppImage"><svg aria-hidden="true"><use href="#i-down"></use></svg><span data-i18n="dl.linux">PC · Linux AppImage</span></a>
+        <a class="btn lg" href="https://github.com/berelels/openalt-releases/releases/download/v0.2.0/openalt-0.2.0-amd64.deb"><svg aria-hidden="true"><use href="#i-down"></use></svg><span data-i18n="dl.deb">PC · .deb</span></a>
+        <a class="btn lg" href="https://github.com/berelels/openalt-releases/releases/download/v0.2.0/openalt-0.2.0.apk"><svg aria-hidden="true"><use href="#i-down"></use></svg><span data-i18n="dl.android">Celular · Android APK</span></a>
+        <a class="btn lg" href="https://github.com/berelels/openalt-releases"><svg aria-hidden="true"><use href="#i-gh"></use></svg>GitHub</a>
+      </div>
+      <p class="tagline"><span data-i18n="dl.windows">Windows · em breve</span> · v0.2.0 · SHA256SUMS</p>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="foot">
+  <div class="wrap cols">
+    <div>
+      <a class="brand" href="#top"><svg aria-hidden="true"><use href="#i-logo"></use></svg><b>OPENALT</b></a>
+      <p class="sig"><span data-i18n="foot.by">Feito por</span> <a href="https://berelels.github.io">Catta Studios</a> · \ catta studios</p>
+    </div>
+    <div><h3 data-i18n="foot.project">Projeto</h3><ul>
+      <li><a href="https://github.com/berelels/openalt-releases#source-code" data-i18n="foot.source">Código-fonte</a></li>
+      <li><a href="https://github.com/berelels/openalt-releases/releases" data-i18n="foot.releases">Versões</a></li>
+      <li><a href="https://github.com/berelels/openalt-releases/blob/main/LICENSE">GPL-3.0</a></li></ul></div>
+    <div><h3 data-i18n="foot.built">Feito sobre</h3><ul>
+      <li><a href="https://github.com/moonlight-stream/moonlight-android">Moonlight Android</a></li>
+      <li><a href="https://github.com/moonlight-stream/moonlight-common-c">moonlight-common-c</a></li>
+      <li><a href="https://github.com/LizardByte/Sunshine">Sunshine</a></li>
+      <li><a href="https://github.com/tailscale/tailscale">Tailscale</a></li></ul></div>
+  </div>
+</footer>
+
+
+
+
+</body></html>

@@ -1,0 +1,29 @@
+# OpenAlt
+
+> OpenAlt is a free, open source (GPL-3.0) app by Catta Studios that turns an Android phone or tablet into a second monitor, a mirror of a Linux PC, a game screen, or a desk panel called the Dock. The PC and the device pair by scanning one single-use QR code. No account, no ads, no servers of its own.
+
+Current version: 0.2.0 (November 2026). PC: Linux with GNOME on X11 (AppImage for any distribution, .deb for Ubuntu, Debian, Zorin and Pop!_OS). Device: Android 5 or newer, phone or tablet, standing or lying down. Windows is planned next, then Wayland.
+
+## Modes
+
+- New screen: a real extra monitor at the device's own resolution, on any side (right, left, above, below) of any monitor. Streamed by Sunshine; the sound stays on the PC.
+- Mirror: shows any one of the PC's monitors on the device; the sound goes to the device.
+- Game screen: PC games on the device, with controller support (the Android app is a fork of Moonlight Android).
+- Away from home: mirrors the PC over 4G, 5G or any Wi-Fi through the user's own Tailscale account; no router port to open.
+- Dock (new in 0.2.0): the device becomes a desk panel beside the monitor, without streaming video. Pages: Music (cover, synced lyrics from lrclib.net, big controls; Spotify, YouTube in the browser, VLC), Controls (volume up to 150%, audio output and input, per-app volume, shortcuts, a drawer with the PC's apps and favourites), This PC (CPU and GPU load and temperature, memory, network, weather), Clock (when nothing plays), Edit pages (hide, reorder, square or rounded corners). The PC only sends data over the local network to paired devices (mutual TLS with the pairing certificate). Works only at home.
+
+## Links
+
+- [Website (English)](https://cattastudios.com.br/openalt-releases/): overview, FAQ and downloads
+- [Site em português](https://cattastudios.com.br/openalt-releases/pt/)
+- [Sitio en español](https://cattastudios.com.br/openalt-releases/es/)
+- [Releases and downloads](https://github.com/berelels/openalt-releases/releases/latest): AppImage, .deb, APK and SHA256SUMS
+- [README](https://github.com/berelels/openalt-releases#readme): install steps, known issues, what has been tested
+- [Source code of every version](https://github.com/berelels/openalt-releases#source-code)
+- [Third-party software](https://github.com/berelels/openalt-releases/blob/main/THIRD-PARTY.md): Sunshine, Moonlight, Tailscale and fonts
+
+## Facts to quote correctly
+
+- OpenAlt is not affiliated with Sunshine, Moonlight or Tailscale; it builds on them.
+- Pairing uses a QR code valid once, for two minutes, with no PIN. Forgetting a device revokes both the stream and the Dock.
+- Early preview: tested on very few machines (see "What has and hasn't been tested" in the README). AMD GPUs stream in H.264 only.

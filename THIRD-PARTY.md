@@ -42,11 +42,14 @@ OpenAlt is licensed under the GNU GPL v3.0 or later ([LICENSE](LICENSE)). It is 
 | [Newsreader](https://github.com/productiontype/Newsreader) | SIL Open Font License 1.1 |
 | [Plus Jakarta Sans](https://github.com/tokotype/PlusJakartaSans) | SIL Open Font License 1.1 |
 | [JetBrains Mono](https://github.com/JetBrains/JetBrainsMono) | SIL Open Font License 1.1 |
+| [Hanken Grotesk](https://fonts.google.com/specimen/Hanken+Grotesk) | SIL Open Font License 1.1 |
 
 ## Website
 
 | Software | License |
 |---|---|
 | [GSAP](https://gsap.com) 3.13 and ScrollTrigger (in `site/vendor/`) | [Standard No-Charge License](https://gsap.com/standard-license) (not GPL) |
+
+The album cover in the Dock screenshots (`site/img/dock/`, `site/img/og.png`) is *Hollywood's Bleeding* by Post Malone, © Republic Records, shown only to illustrate the Music page; it is not covered by the GPL.
 
 The website itself (`site/`) is GPL-3.0, like the rest of OpenAlt. It loads nothing from other servers, has no analytics and no cookies, and only remembers the language you pick (`localStorage`).
