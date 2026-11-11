@@ -11,7 +11,7 @@ import vm from 'node:vm';
 
 const site = join(dirname(fileURLToPath(import.meta.url)), '..', 'site');
 const BASE = 'https://cattastudios.com.br/openalt-releases/';
-const VERSION = '0.2.0';
+const VERSION = '0.2.1';
 const LANGS = { en: { html: 'en', og: 'en_US', dir: '' }, pt: { html: 'pt-BR', og: 'pt_BR', dir: 'pt/' }, es: { html: 'es', og: 'es_ES', dir: 'es/' } };
 
 const ctx = {};

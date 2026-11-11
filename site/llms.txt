@@ -2,7 +2,7 @@
 
 > OpenAlt is a free, open source (GPL-3.0) app by Catta Studios that turns an Android phone or tablet into a second monitor, a mirror of a Linux PC, a game screen, or a desk panel called the Dock. The PC and the device pair by scanning one single-use QR code. No account, no ads, no servers of its own.
 
-Current version: 0.2.0 (November 2026). PC: Linux with GNOME on X11 (AppImage for any distribution, .deb for Ubuntu, Debian, Zorin and Pop!_OS). Device: Android 5 or newer, phone or tablet, standing or lying down. Windows is planned next, then Wayland.
+Current version: 0.2.1 (November 2026). PC: Linux with GNOME on X11 (AppImage for any distribution, .deb for Ubuntu, Debian, Zorin and Pop!_OS). Device: Android 5 or newer, phone or tablet, standing or lying down. Windows is planned next, then Wayland.
 
 ## Modes
 
